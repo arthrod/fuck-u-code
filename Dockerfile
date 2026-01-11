@@ -7,7 +7,7 @@ RUN go mod download
 COPY . .
 RUN go build -o /app/fuck-u-code ./cmd/fuck-u-code
 
-FROM alpine:3.20.3
+FROM alpine:3.23.2
 WORKDIR /bin
 COPY --from=builder /app/fuck-u-code .
 
